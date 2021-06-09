@@ -7,3 +7,12 @@ CREATE TABLE users (
     phone INT NOT NULL,
     isSignedIn BOOL NOT NULL
 );
+
+USE users_db;
+INSERT INTO users (name, username, phone, isSignedIn) 
+VALUES ('John Doe', 'johndoe', 1234567890, true);
+
+USE users_db;
+INSERT INTO users (name, username, phone, isSignedIn)
+VALUES ('Jane Doe', 'janedoe', 1234567890, false),
+('Jack Doe', 'jackdoe', 1234567890, false);
