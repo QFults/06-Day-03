@@ -16,3 +16,34 @@ USE users_db;
 INSERT INTO users (name, username, phone, isSignedIn)
 VALUES ('Jane Doe', 'janedoe', 1234567890, false),
 ('Jack Doe', 'jackdoe', 1234567890, false);
+
+USE users_db;
+SELECT name, username, phone FROM users;
+
+USE users_db;
+SELECT * FROM users
+WHERE name = 'John Doe';
+
+USE users_db;
+SELECT * FROM users
+WHERE isSignedIn = false;
+
+USE users_db;
+SELECT * FROM users
+WHERE name = 'Jane Doe' AND isSignedIn = false;
+
+USE users_db;
+SELECT * FROM users
+WHERE name = 'Jane Doe' OR isSignedIn = false;
+
+USE users_db;
+SELECT * FROM users
+WHERE name LIKE '% Doe';
+
+USE users_db;
+SELECT * FROM users
+WHERE name LIKE 'J%n% Doe';
+
+USE users_db;
+SELECT * FROM users
+WHERE name LIKE 'Ja__ Doe';
