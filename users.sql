@@ -2,6 +2,7 @@ CREATE DATABASE users_db;
 
 USE users_db;
 CREATE TABLE users (
+	id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
 	name VARCHAR(40) NOT NULL,
     username VARCHAR(16) NOT NULL,
     phone INT NOT NULL,
@@ -47,3 +48,17 @@ WHERE name LIKE 'J%n% Doe';
 USE users_db;
 SELECT * FROM users
 WHERE name LIKE 'Ja__ Doe';
+
+USE users_db;
+UPDATE users
+SET isSignedIn = true, phone = 1231231231
+WHERE name = 'Jane Doe';
+
+USE users_db;
+DELETE FROM users WHERE name = 'Jane Doe';
+
+USE users_db;
+DELETE FROM users WHERE isSignedIn = true;
+
+USE users_db;
+SELECT * FROM users;
